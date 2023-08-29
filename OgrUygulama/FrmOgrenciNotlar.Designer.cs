@@ -1,6 +1,6 @@
 ﻿namespace OgrUygulama
 {
-    partial class OgrenciNotlar
+    partial class FrmOgrenciNotlar
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "OgrenciNotlar";
             this.Text = "OgrenciNotlar";
+            this.Load += new System.EventHandler(this.OgrenciNotlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
