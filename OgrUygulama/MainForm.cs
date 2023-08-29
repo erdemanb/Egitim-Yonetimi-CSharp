@@ -20,9 +20,16 @@ namespace OgrUygulama
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmOgrenciNotlar frm = new FrmOgrenciNotlar();
-            frm.numara = textBox1.Text.Trim();
-            frm.Show();
+            if (textBox1.Text == string.Empty)
+            {
+                MessageBox.Show("Lütfen Öğrenci Numarası Giriniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+            else
+            {
+                frm.numara = textBox1.Text.Trim();
+                frm.Show();
+            }
         }
     }
 }

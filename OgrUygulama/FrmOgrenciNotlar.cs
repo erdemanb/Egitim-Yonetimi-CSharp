@@ -23,7 +23,8 @@ namespace OgrUygulama
             SqlConnection baglanti = new SqlConnection(@"Data Source=.\\MSSQLSERVER01;Initial Catalog=OgrUygulama;Integrated Security=True");
             SqlCommand komut = new SqlCommand("Select * From Tbl_Notlar Where OgrenciId = @P1", baglanti);
             komut.Parameters.AddWithValue("@P1", numara);
-            this.Text = numara.ToString();
+                this.Text = numara.ToString();
+
             
         }
     }
