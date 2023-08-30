@@ -1,4 +1,4 @@
-# Egitim-Yonetimi-CSharp
+# Eğitim Kurumu Yönetim Sistemi
 Örnek bir eğitim kurumu yönetim projesi.
 
 Kodların düzgün çalışması için veri tabanı bağlantı adresini kontrol ediniz.
