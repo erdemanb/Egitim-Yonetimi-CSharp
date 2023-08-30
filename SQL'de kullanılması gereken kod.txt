@@ -1,0 +1,40 @@
+CREATE TABLE Tbl_Dersler (
+    DersId TINYINT PRIMARY KEY IDENTITY,
+    DersAd VARCHAR(30)
+);
+
+-- Tbl_Kulupler tablosu oluşturma
+CREATE TABLE Tbl_Kulupler (
+    KulupId TINYINT PRIMARY KEY IDENTITY,
+    KulupAd VARCHAR(30)
+);
+
+-- Tbl_Notlar tablosu oluşturma
+CREATE TABLE Tbl_Notlar (
+    NotId INT PRIMARY KEY IDENTITY,
+    DersId TINYINT,
+    OgrId INT,
+    Sinav1 TINYINT,
+    Sinav2 TINYINT,
+    Sinav3 TINYINT,
+    Proje TINYINT,
+    Ortalama DECIMAL(5,2),
+    Durum BIT,
+    FOREIGN KEY (DersId) REFERENCES Tbl_Dersler(DersId)
+);
+
+-- Tbl_Ogrenci tablosu oluşturma
+CREATE TABLE Tbl_Ogrenci (
+    OgrenciId INT PRIMARY KEY IDENTITY,
+    OgrenciAd VARCHAR(20),
+    OgrenciSoyad VARCHAR(15),
+    OgrKulup TINYINT,
+    OgrCinsiyet VARCHAR(5),
+    FOREIGN KEY (OgrKulup) REFERENCES Tbl_Kulupler(KulupId)
+);
+
+-- Tbl_Ogretmenler tablosu oluşturma
+CREATE TABLE Tbl_Ogretmenler (
+    OgrtId TINYINT PRIMARY KEY IDENTITY,
+    OgrtBrans TINYINT
+);
