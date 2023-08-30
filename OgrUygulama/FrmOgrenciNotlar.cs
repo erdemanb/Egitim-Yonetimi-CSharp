@@ -34,7 +34,7 @@ namespace OgrUygulama
             if (reader.Read())
             {
                 string ogrenciAdi = reader["OgrenciAd"].ToString();
-                this.Text = "Öğrenci: " + ogrenciAdi;
+                this.Text = "Öğrenci Adı: " + ogrenciAdi;
             }
             reader.Close();
             baglanti.Close();

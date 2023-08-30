@@ -24,5 +24,11 @@ namespace OgrUygulama
             frm.numara = textBox1.Text;
             frm.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmOgretmen frmo = new FrmOgretmen();
+            frmo.Show();
+        }
     }
 }
