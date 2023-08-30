@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,16 +21,8 @@ namespace OgrUygulama
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmOgrenciNotlar frm = new FrmOgrenciNotlar();
-            if (textBox1.Text == string.Empty)
-            {
-                MessageBox.Show("Lütfen Öğrenci Numarası Giriniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-                frm.numara = textBox1.Text.Trim();
-                frm.Show();
-            }
+            frm.numara = textBox1.Text;
+            frm.Show();
         }
     }
 }

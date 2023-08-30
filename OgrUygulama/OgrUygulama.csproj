@@ -58,6 +58,11 @@
     <Compile Include="FrmOgrenciNotlar.Designer.cs">
       <DependentUpon>FrmOgrenciNotlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="OgrUygulamaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OgrUygulamaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -75,6 +80,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="OgrUygulamaDataSet.xsc">
+      <DependentUpon>OgrUygulamaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OgrUygulamaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OgrUygulamaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OgrUygulamaDataSet.xss">
+      <DependentUpon>OgrUygulamaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

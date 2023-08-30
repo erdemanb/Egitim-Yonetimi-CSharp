@@ -17,15 +17,17 @@ namespace OgrUygulama
         {
             InitializeComponent();
         }
+        SqlConnection baglanti = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=OgrUygulama;Integrated Security=True");
         public string numara;
         private void OgrenciNotlar_Load(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection(@"Data Source=.\\MSSQLSERVER01;Initial Catalog=OgrUygulama;Integrated Security=True");
-            SqlCommand komut = new SqlCommand("Select * From Tbl_Notlar Where OgrenciId = @P1", baglanti);
+            SqlCommand komut = new SqlCommand("Select * From [Tbl_Notlar] Where OgrID = @P1", baglanti);
             komut.Parameters.AddWithValue("@P1", numara);
-                this.Text = numara.ToString();
-
-            
+            // this.Text = "Öğrenci Numarası= " + numara;
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }
