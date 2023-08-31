@@ -63,5 +63,41 @@ namespace OgrUygulama
             finally { baglanti.Close(); }
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtKulupID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtKulupAd.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                baglanti.Open();
+                SqlCommand komut = new SqlCommand("DELETE FROM Tbl_Kulupler WHERE KulupID = @p1", baglanti);
+
+                if (!string.IsNullOrWhiteSpace(txtKulupID.Text))
+                {
+                    komut.Parameters.AddWithValue("@p1", txtKulupID.Text);
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Kulüp Silindi!!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Listele();
+                }
+                else
+                {
+                    MessageBox.Show("SİLİNEMEDİ, Kulüp ID boş olamaz!", "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu!: " + ex.ToString(), "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                baglanti.Close();
+            }
+        }
     }
 }

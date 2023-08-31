@@ -30,9 +30,9 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnListele = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtKulupID = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(640, 277);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnEkle
             // 
@@ -61,15 +62,15 @@
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // button2
+            // btnGuncelle
             // 
-            this.button2.Location = new System.Drawing.Point(406, 385);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 46);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Güncelle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Location = new System.Drawing.Point(406, 385);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(144, 46);
+            this.btnGuncelle.TabIndex = 2;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
             // btnListele
             // 
@@ -82,15 +83,16 @@
             this.btnListele.UseVisualStyleBackColor = true;
             this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
-            // button4
+            // btnSil
             // 
-            this.button4.Location = new System.Drawing.Point(406, 438);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 46);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Sil";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSil.Location = new System.Drawing.Point(406, 438);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(144, 46);
+            this.btnSil.TabIndex = 4;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label1
             // 
@@ -112,6 +114,7 @@
             // 
             // txtKulupID
             // 
+            this.txtKulupID.Enabled = false;
             this.txtKulupID.Location = new System.Drawing.Point(257, 312);
             this.txtKulupID.Name = "txtKulupID";
             this.txtKulupID.Size = new System.Drawing.Size(186, 22);
@@ -133,9 +136,9 @@
             this.Controls.Add(this.txtKulupID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnListele);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,9 +156,9 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnListele;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtKulupID;
