@@ -30,5 +30,6 @@ namespace OgrUygulama
             FrmOgretmen frmo = new FrmOgretmen();
             frmo.Show();
         }
+
     }
 }

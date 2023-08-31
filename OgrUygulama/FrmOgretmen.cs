@@ -16,5 +16,11 @@ namespace OgrUygulama
         {
             InitializeComponent();
         }
+
+        private void btnKulupler_Click(object sender, EventArgs e)
+        {
+            FrmKulupler frk = new FrmKulupler();
+            frk.Show();
+        }
     }
 }

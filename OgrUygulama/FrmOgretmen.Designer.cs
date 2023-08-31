@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnKulupler = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -87,16 +87,17 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // button2
+            // btnKulupler
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(105, 203);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 53);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Kulüpler";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnKulupler.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKulupler.Location = new System.Drawing.Point(105, 203);
+            this.btnKulupler.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnKulupler.Name = "btnKulupler";
+            this.btnKulupler.Size = new System.Drawing.Size(139, 53);
+            this.btnKulupler.TabIndex = 4;
+            this.btnKulupler.Text = "Kulüpler";
+            this.btnKulupler.UseVisualStyleBackColor = true;
+            this.btnKulupler.Click += new System.EventHandler(this.btnKulupler_Click);
             // 
             // button3
             // 
@@ -162,7 +163,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnKulupler);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -187,7 +188,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnKulupler;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox4;
