@@ -82,12 +82,42 @@ namespace OgrUygulama
                 {
                     komut.Parameters.AddWithValue("@p1", txtKulupID.Text);
                     komut.ExecuteNonQuery();
-                    MessageBox.Show("Kulüp Silindi!!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Kulüp Silindi!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Listele();
                 }
                 else
                 {
                     MessageBox.Show("SİLİNEMEDİ, Kulüp ID boş olamaz!", "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu!: " + ex.ToString(), "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                baglanti.Close();
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                baglanti.Open();
+                SqlCommand komut1 = new SqlCommand("UPDATE Tbl_kulupler SET Kulupad=@p1 where KulupID=@p2", baglanti);
+
+                if (!string.IsNullOrWhiteSpace(txtKulupID.Text))
+                {
+                    komut1.Parameters.AddWithValue("@p1", txtKulupAd.Text);
+                    komut1.Parameters.AddWithValue("@p2", txtKulupID.Text);
+                    komut1.ExecuteNonQuery();
+                    MessageBox.Show("Kulüp Güncellendi!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Listele();
+                }
+                else
+                {
+                    MessageBox.Show("Kulüp ID boş olamaz!", "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
