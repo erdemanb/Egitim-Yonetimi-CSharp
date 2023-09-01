@@ -22,5 +22,11 @@ namespace OgrUygulama
             FrmKulupler frk = new FrmKulupler();
             frk.Show();
         }
+
+        private void btnDersler_Click(object sender, EventArgs e)
+        {
+            FrmDersler frd = new FrmDersler();
+            frd.Show();
+        }
     }
 }
