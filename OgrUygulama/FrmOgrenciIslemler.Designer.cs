@@ -112,6 +112,7 @@
             this.btnListele.TabIndex = 21;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // btnGuncelle
             // 
@@ -170,9 +171,9 @@
             this.label4.Location = new System.Drawing.Point(85, 151);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 15);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Kulübü:";
+            this.label4.Text = "Kulüp:";
             // 
             // cmbOgrenciKulup
             // 
