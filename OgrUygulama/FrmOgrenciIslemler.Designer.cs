@@ -94,18 +94,19 @@
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(232, 157);
+            this.btnSil.Location = new System.Drawing.Point(229, 169);
             this.btnSil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(144, 42);
             this.btnSil.TabIndex = 22;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnListele
             // 
             this.btnListele.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnListele.Location = new System.Drawing.Point(232, 94);
+            this.btnListele.Location = new System.Drawing.Point(199, 234);
             this.btnListele.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(144, 42);
@@ -117,18 +118,19 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(56, 157);
+            this.btnGuncelle.Location = new System.Drawing.Point(53, 169);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(144, 42);
             this.btnGuncelle.TabIndex = 20;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(56, 94);
+            this.btnEkle.Location = new System.Drawing.Point(41, 234);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(144, 42);
@@ -146,6 +148,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(925, 288);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
             // txtOgrenciSoyad
             // 
@@ -182,6 +186,7 @@
             this.cmbOgrenciKulup.Name = "cmbOgrenciKulup";
             this.cmbOgrenciKulup.Size = new System.Drawing.Size(200, 23);
             this.cmbOgrenciKulup.TabIndex = 30;
+            this.cmbOgrenciKulup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbOgrenciKulup_KeyPress);
             // 
             // rbKiz
             // 
@@ -193,6 +198,7 @@
             this.rbKiz.TabStop = true;
             this.rbKiz.Text = "Kız";
             this.rbKiz.UseVisualStyleBackColor = true;
+            this.rbKiz.CheckedChanged += new System.EventHandler(this.rbKiz_CheckedChanged);
             // 
             // rBErkek
             // 
@@ -204,6 +210,7 @@
             this.rBErkek.TabStop = true;
             this.rBErkek.Text = "Erkek";
             this.rBErkek.UseVisualStyleBackColor = true;
+            this.rBErkek.CheckedChanged += new System.EventHandler(this.rBErkek_CheckedChanged);
             // 
             // label5
             // 
@@ -220,7 +227,9 @@
             this.groupBox1.Controls.Add(this.txtOgrenciAd);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnEkle);
             this.groupBox1.Controls.Add(this.rBErkek);
+            this.groupBox1.Controls.Add(this.btnListele);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.rbKiz);
             this.groupBox1.Controls.Add(this.txtOgrenciID);
@@ -230,7 +239,7 @@
             this.groupBox1.Controls.Add(this.txtOgrenciSoyad);
             this.groupBox1.Location = new System.Drawing.Point(43, 322);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(379, 231);
+            this.groupBox1.Size = new System.Drawing.Size(379, 293);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Bilgileri";
@@ -240,13 +249,11 @@
             this.groupBox2.Controls.Add(this.btnOgrenciAra);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtOgrenciAra);
-            this.groupBox2.Controls.Add(this.btnEkle);
             this.groupBox2.Controls.Add(this.btnGuncelle);
             this.groupBox2.Controls.Add(this.btnSil);
-            this.groupBox2.Controls.Add(this.btnListele);
             this.groupBox2.Location = new System.Drawing.Point(496, 322);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 231);
+            this.groupBox2.Size = new System.Drawing.Size(420, 293);
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
@@ -254,7 +261,7 @@
             // btnOgrenciAra
             // 
             this.btnOgrenciAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOgrenciAra.Location = new System.Drawing.Point(300, 50);
+            this.btnOgrenciAra.Location = new System.Drawing.Point(297, 95);
             this.btnOgrenciAra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOgrenciAra.Name = "btnOgrenciAra";
             this.btnOgrenciAra.Size = new System.Drawing.Size(76, 26);
@@ -266,7 +273,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(53, 56);
+            this.label6.Location = new System.Drawing.Point(50, 101);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 15);
@@ -276,7 +283,7 @@
             // txtOgrenciAra
             // 
             this.txtOgrenciAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtOgrenciAra.Location = new System.Drawing.Point(145, 53);
+            this.txtOgrenciAra.Location = new System.Drawing.Point(142, 98);
             this.txtOgrenciAra.Margin = new System.Windows.Forms.Padding(4);
             this.txtOgrenciAra.Name = "txtOgrenciAra";
             this.txtOgrenciAra.Size = new System.Drawing.Size(147, 21);
@@ -287,7 +294,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(952, 565);
+            this.ClientSize = new System.Drawing.Size(952, 629);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
