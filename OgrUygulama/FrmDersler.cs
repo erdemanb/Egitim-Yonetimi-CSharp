@@ -33,5 +33,20 @@ namespace OgrUygulama
         {
             dataGridView1.DataSource = ds.DersListesi();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            ds.DersSil(Convert.ToByte(txtDersID.Text));
+            MessageBox.Show("Ders silme işlemi tamamlandı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            ds.DersGuncelle(txtDersAd.Text, byte.Parse(txtDersID.Text));
+            MessageBox.Show("Ders güncelleme işlemi tamamlandı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
     }
 }
