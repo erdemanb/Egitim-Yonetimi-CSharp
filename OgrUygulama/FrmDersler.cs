@@ -16,10 +16,21 @@ namespace OgrUygulama
         {
             InitializeComponent();
         }
+        DataSet1TableAdapters.Tbl_DerslerTableAdapter ds = new DataSet1TableAdapters.Tbl_DerslerTableAdapter();
 
         private void FrmDersler_Load(object sender, EventArgs e)
         {
-            DataSet1TableAdapters.Tbl_DerslerTableAdapter ds = new DataSet1TableAdapters.Tbl_DerslerTableAdapter();
+            dataGridView1.DataSource = ds.DersListesi();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            ds.DersEkle(txtDersAd.Text);
+            MessageBox.Show("Ders ekleme işlemi tamamlandı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnListele_Click(object sender, EventArgs e)
+        {
             dataGridView1.DataSource = ds.DersListesi();
         }
     }
