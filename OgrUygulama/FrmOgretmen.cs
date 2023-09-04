@@ -28,5 +28,11 @@ namespace OgrUygulama
             FrmDersler frd = new FrmDersler();
             frd.Show();
         }
+
+        private void btnOgrenciIslemleri_Click(object sender, EventArgs e)
+        {
+            FrmOgrenciler fro = new FrmOgrenciler();
+            fro.Show();
+        }
     }
 }

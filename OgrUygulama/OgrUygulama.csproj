@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmOgrenciIslemler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciIslemler.Designer.cs">
+      <DependentUpon>FrmOgrenciIslemler.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDersler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmOgrenciIslemler.resx">
+      <DependentUpon>FrmOgrenciIslemler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDersler.resx">
       <DependentUpon>FrmDersler.cs</DependentUpon>
     </EmbeddedResource>

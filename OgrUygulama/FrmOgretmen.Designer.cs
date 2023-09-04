@@ -37,7 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnOgrenciIslemleri = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -132,16 +132,17 @@
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
-            // button5
+            // btnOgrenciIslemleri
             // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(105, 396);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(139, 53);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Öğrenci İşlemleri";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnOgrenciIslemleri.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOgrenciIslemleri.Location = new System.Drawing.Point(105, 396);
+            this.btnOgrenciIslemleri.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnOgrenciIslemleri.Name = "btnOgrenciIslemleri";
+            this.btnOgrenciIslemleri.Size = new System.Drawing.Size(139, 53);
+            this.btnOgrenciIslemleri.TabIndex = 9;
+            this.btnOgrenciIslemleri.Text = "Öğrenci İşlemleri";
+            this.btnOgrenciIslemleri.UseVisualStyleBackColor = true;
+            this.btnOgrenciIslemleri.Click += new System.EventHandler(this.btnOgrenciIslemleri_Click);
             // 
             // pictureBox5
             // 
@@ -159,7 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(264, 466);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnOgrenciIslemleri);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox4);
@@ -193,7 +194,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnOgrenciIslemleri;
         private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

@@ -67,7 +67,7 @@ SELECT DersID, DersAd FROM Tbl_Dersler WHERE (DersID = @DersID)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="OgrUygulamaConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DersGuncelle" Modifier="Public" Name="DersGuncelle" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DersGuncelle">
+              <DbSource ConnectionRef="OgrUygulamaConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DersGuncelle" Modifier="Public" Name="DersGuncelle" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DersGuncelle">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [Tbl_Dersler] SET [DersAd] = @DersAd WHERE ([DersID] = @Original_DersID) </CommandText>
@@ -78,7 +78,7 @@ SELECT DersID, DersAd FROM Tbl_Dersler WHERE (DersID = @DersID)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="OgrUygulamaConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DersSil" Modifier="Public" Name="DersSil" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DersSil">
+              <DbSource ConnectionRef="OgrUygulamaConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DersSil" Modifier="Public" Name="DersSil" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="DersSil">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [Tbl_Dersler] WHERE ([DersID] = @Original_DersID)</CommandText>
@@ -90,6 +90,28 @@ SELECT DersID, DersAd FROM Tbl_Dersler WHERE (DersID = @DersID)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tbl_OgrenciTableAdapter" GeneratorDataComponentClassName="Tbl_OgrenciTableAdapter" Name="Tbl_Ogrenci" UserDataComponentName="Tbl_OgrenciTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OgrUygulamaConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Listele" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="OgrenciListesi" GeneratorSourceName="Listele" GetMethodModifier="Public" GetMethodName="OgrenciListesi" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="OgrenciListesi" UserSourceName="Listele">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tbl_Ogrenci.OgrenciID, Tbl_Ogrenci.OgrenciAd, Tbl_Ogrenci.OgrenciSoyad, Tbl_Ogrenci.OgrCinsiyet, Tbl_Kulupler.KulupAd
+FROM            Tbl_Ogrenci INNER JOIN
+                         Tbl_Kulupler ON Tbl_Ogrenci.OgrKulup = Tbl_Kulupler.KulupID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OgrenciID" DataSetColumn="OgrenciID" />
+              <Mapping SourceColumn="OgrenciAd" DataSetColumn="OgrenciAd" />
+              <Mapping SourceColumn="OgrenciSoyad" DataSetColumn="OgrenciSoyad" />
+              <Mapping SourceColumn="OgrCinsiyet" DataSetColumn="OgrCinsiyet" />
+              <Mapping SourceColumn="KulupAd" DataSetColumn="KulupAd" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -98,11 +120,46 @@ SELECT DersID, DersAd FROM Tbl_Dersler WHERE (DersID = @DersID)</CommandText>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Tbl_Dersler" msprop:Generator_RowClassName="Tbl_DerslerRow" msprop:Generator_RowEvHandlerName="Tbl_DerslerRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_DerslerRowDeleted" msprop:Generator_RowDeletingName="Tbl_DerslerRowDeleting" msprop:Generator_RowEvArgName="Tbl_DerslerRowChangeEvent" msprop:Generator_TablePropName="Tbl_Dersler" msprop:Generator_RowChangedName="Tbl_DerslerRowChanged" msprop:Generator_UserTableName="Tbl_Dersler" msprop:Generator_RowChangingName="Tbl_DerslerRowChanging" msprop:Generator_TableClassName="Tbl_DerslerDataTable" msprop:Generator_TableVarName="tableTbl_Dersler">
+        <xs:element name="Tbl_Dersler" msprop:Generator_RowEvHandlerName="Tbl_DerslerRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_DerslerRowDeleted" msprop:Generator_RowDeletingName="Tbl_DerslerRowDeleting" msprop:Generator_RowEvArgName="Tbl_DerslerRowChangeEvent" msprop:Generator_TablePropName="Tbl_Dersler" msprop:Generator_RowChangedName="Tbl_DerslerRowChanged" msprop:Generator_UserTableName="Tbl_Dersler" msprop:Generator_RowChangingName="Tbl_DerslerRowChanging" msprop:Generator_RowClassName="Tbl_DerslerRow" msprop:Generator_TableClassName="Tbl_DerslerDataTable" msprop:Generator_TableVarName="tableTbl_Dersler">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="DersID" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DersID" msprop:Generator_ColumnPropNameInTable="DersIDColumn" msprop:Generator_ColumnPropNameInRow="DersID" msprop:Generator_ColumnVarNameInTable="columnDersID" type="xs:unsignedByte" />
-              <xs:element name="DersAd" msprop:Generator_UserColumnName="DersAd" msprop:Generator_ColumnPropNameInTable="DersAdColumn" msprop:Generator_ColumnPropNameInRow="DersAd" msprop:Generator_ColumnVarNameInTable="columnDersAd" minOccurs="0">
+              <xs:element name="DersID" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="DersIDColumn" msprop:Generator_ColumnPropNameInRow="DersID" msprop:Generator_UserColumnName="DersID" msprop:Generator_ColumnVarNameInTable="columnDersID" type="xs:unsignedByte" />
+              <xs:element name="DersAd" msprop:Generator_ColumnPropNameInTable="DersAdColumn" msprop:Generator_ColumnPropNameInRow="DersAd" msprop:Generator_UserColumnName="DersAd" msprop:Generator_ColumnVarNameInTable="columnDersAd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_Ogrenci" msprop:Generator_RowClassName="Tbl_OgrenciRow" msprop:Generator_RowEvHandlerName="Tbl_OgrenciRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_OgrenciRowDeleted" msprop:Generator_RowDeletingName="Tbl_OgrenciRowDeleting" msprop:Generator_RowEvArgName="Tbl_OgrenciRowChangeEvent" msprop:Generator_TablePropName="Tbl_Ogrenci" msprop:Generator_RowChangedName="Tbl_OgrenciRowChanged" msprop:Generator_UserTableName="Tbl_Ogrenci" msprop:Generator_RowChangingName="Tbl_OgrenciRowChanging" msprop:Generator_TableClassName="Tbl_OgrenciDataTable" msprop:Generator_TableVarName="tableTbl_Ogrenci">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OgrenciID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="OgrenciID" msprop:Generator_ColumnPropNameInTable="OgrenciIDColumn" msprop:Generator_ColumnPropNameInRow="OgrenciID" msprop:Generator_ColumnVarNameInTable="columnOgrenciID" type="xs:int" />
+              <xs:element name="OgrenciAd" msprop:Generator_UserColumnName="OgrenciAd" msprop:Generator_ColumnPropNameInTable="OgrenciAdColumn" msprop:Generator_ColumnPropNameInRow="OgrenciAd" msprop:Generator_ColumnVarNameInTable="columnOgrenciAd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OgrenciSoyad" msprop:Generator_UserColumnName="OgrenciSoyad" msprop:Generator_ColumnPropNameInTable="OgrenciSoyadColumn" msprop:Generator_ColumnPropNameInRow="OgrenciSoyad" msprop:Generator_ColumnVarNameInTable="columnOgrenciSoyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OgrCinsiyet" msprop:Generator_UserColumnName="OgrCinsiyet" msprop:Generator_ColumnPropNameInTable="OgrCinsiyetColumn" msprop:Generator_ColumnPropNameInRow="OgrCinsiyet" msprop:Generator_ColumnVarNameInTable="columnOgrCinsiyet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KulupAd" msprop:Generator_ColumnPropNameInRow="KulupAd" msprop:Generator_ColumnPropNameInTable="KulupAdColumn" msprop:Generator_ColumnVarNameInTable="columnKulupAd" msprop:Generator_UserColumnName="KulupAd" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
@@ -117,6 +174,10 @@ SELECT DersID, DersAd FROM Tbl_Dersler WHERE (DersID = @DersID)</CommandText>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Tbl_Dersler" />
       <xs:field xpath="mstns:DersID" />
+    </xs:unique>
+    <xs:unique name="Tbl_Ogrenci_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tbl_Ogrenci" />
+      <xs:field xpath="mstns:OgrenciID" />
     </xs:unique>
   </xs:element>
 </xs:schema>
