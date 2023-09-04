@@ -20,7 +20,20 @@ namespace OgrUygulama
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            
+            string c = "";
+            if (rBErkek.Checked == true)
+            {
+                rbKiz.Checked = false;
+                c = rBErkek.Text;
+            }
+            if (rbKiz.Checked == true)
+            {
+                rBErkek.Checked = false;
+                c = rbKiz.Text;
+            }
+            ds.OgrenciEkle(txtOgrenciAd.Text,txtOgrenciSoyad.Text,byte.Parse(cmbOgrenciKulup.Text),c);
+            MessageBox.Show("Öğrenci eklendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //CMB'ye data ekle!!!
         }
 
         private void FrmOgrenciler_Load(object sender, EventArgs e)
