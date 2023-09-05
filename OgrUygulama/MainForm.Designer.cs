@@ -43,7 +43,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(126, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(91, 17);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 115);
@@ -56,7 +56,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(436, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(466, 17);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(145, 126);
@@ -68,7 +68,7 @@
             // lblOgrenci
             // 
             this.lblOgrenci.AutoSize = true;
-            this.lblOgrenci.Location = new System.Drawing.Point(172, 148);
+            this.lblOgrenci.Location = new System.Drawing.Point(145, 147);
             this.lblOgrenci.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOgrenci.Name = "lblOgrenci";
             this.lblOgrenci.Size = new System.Drawing.Size(64, 18);
@@ -78,7 +78,7 @@
             // lblOgretmen
             // 
             this.lblOgretmen.AutoSize = true;
-            this.lblOgretmen.Location = new System.Drawing.Point(462, 147);
+            this.lblOgretmen.Location = new System.Drawing.Point(495, 147);
             this.lblOgretmen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOgretmen.Name = "lblOgretmen";
             this.lblOgretmen.Size = new System.Drawing.Size(78, 18);
@@ -87,7 +87,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(320, 192);
+            this.textBox1.Location = new System.Drawing.Point(297, 193);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(175, 25);
             this.textBox1.TabIndex = 4;
@@ -95,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 195);
+            this.label1.Location = new System.Drawing.Point(222, 196);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 18);

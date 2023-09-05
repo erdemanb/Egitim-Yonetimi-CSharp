@@ -268,6 +268,7 @@
             this.btnOgrenciAra.TabIndex = 35;
             this.btnOgrenciAra.Text = "Ara";
             this.btnOgrenciAra.UseVisualStyleBackColor = true;
+            this.btnOgrenciAra.Click += new System.EventHandler(this.btnOgrenciAra_Click);
             // 
             // label6
             // 

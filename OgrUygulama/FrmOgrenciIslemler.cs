@@ -22,9 +22,9 @@ namespace OgrUygulama
         string c = "";
         private void btnEkle_Click(object sender, EventArgs e)
         {
-           
-           
-            ds.OgrenciEkle(txtOgrenciAd.Text,txtOgrenciSoyad.Text,byte.Parse(cmbOgrenciKulup.SelectedValue.ToString()),c);
+
+
+            ds.OgrenciEkle(txtOgrenciAd.Text, txtOgrenciSoyad.Text, byte.Parse(cmbOgrenciKulup.SelectedValue.ToString()), c);
             MessageBox.Show("Öğrenci eklendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=OgrUygulama;Integrated Security=True");
@@ -47,7 +47,7 @@ namespace OgrUygulama
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource=ds.OgrenciListesi();
+            dataGridView1.DataSource = ds.OgrenciListesi();
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -73,15 +73,15 @@ namespace OgrUygulama
                 else
                 {
                     rbKiz.Checked = true;
-                    c= rbKiz.Text;
+                    c = rbKiz.Text;
                 }
             }
             catch (Exception ex)
             {
 
-                    MessageBox.Show("HATA!" + ex.Message);
+                MessageBox.Show("HATA!" + ex.Message);
             }
-           
+
 
 
 
@@ -89,7 +89,7 @@ namespace OgrUygulama
 
         private void cmbOgrenciKulup_KeyPress(object sender, KeyPressEventArgs e)
         {
-                e.Handled = true; // Klavye girişini engelle
+            e.Handled = true; // Klavye girişini engelle
 
         }
 
@@ -101,12 +101,11 @@ namespace OgrUygulama
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            ds.OgrenciGuncelle(txtOgrenciAd.Text,txtOgrenciSoyad.Text,Byte.Parse(cmbOgrenciKulup.SelectedValue.ToString()),c,Convert.ToInt32(txtOgrenciID.Text));
+            ds.OgrenciGuncelle(txtOgrenciAd.Text, txtOgrenciSoyad.Text, Byte.Parse(cmbOgrenciKulup.SelectedValue.ToString()), c, Convert.ToInt32(txtOgrenciID.Text));
         }
 
         private void rbKiz_CheckedChanged(object sender, EventArgs e)
         {
-
             if (rbKiz.Checked == true)
             {
                 rBErkek.Checked = false;
@@ -121,7 +120,11 @@ namespace OgrUygulama
                 rbKiz.Checked = false;
                 c = rBErkek.Text;
             }
+        }
 
+        private void btnOgrenciAra_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ds.OgrenciGetirByName(txtOgrenciAra.Text);
         }
     }
 }
