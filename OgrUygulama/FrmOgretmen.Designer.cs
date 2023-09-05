@@ -110,6 +110,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Notlar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -121,6 +122,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Öğretmenler";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox4
             // 

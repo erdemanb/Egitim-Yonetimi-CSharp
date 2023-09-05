@@ -34,5 +34,16 @@ namespace OgrUygulama
             FrmOgrenciler fro = new FrmOgrenciler();
             fro.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmSinavNotlar FrmSN = new FrmSinavNotlar();
+            FrmSN.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
