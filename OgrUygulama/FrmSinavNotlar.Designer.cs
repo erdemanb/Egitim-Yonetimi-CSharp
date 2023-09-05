@@ -30,7 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtOgrenciAd = new System.Windows.Forms.TextBox();
+            this.txtSinav2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHesapla = new System.Windows.Forms.Button();
             this.btnListele = new System.Windows.Forms.Button();
@@ -39,14 +39,14 @@
             this.cmbDersListesi = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtOgrenciSoyad = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSinav1 = new System.Windows.Forms.TextBox();
+            this.txtSinav3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtProje = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDurum = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtOrtalama = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnOgrenciBul = new System.Windows.Forms.Button();
@@ -61,20 +61,21 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(930, 311);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnOgrenciBul);
             this.groupBox1.Controls.Add(this.btnTemizle);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtDurum);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtOrtalama);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtProje);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtSinav3);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtOgrenciAd);
+            this.groupBox1.Controls.Add(this.txtSinav2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnHesapla);
             this.groupBox1.Controls.Add(this.btnListele);
@@ -83,7 +84,7 @@
             this.groupBox1.Controls.Add(this.cmbDersListesi);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtOgrenciSoyad);
+            this.groupBox1.Controls.Add(this.txtSinav1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(930, 212);
@@ -91,13 +92,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Öğrenci Bilgileri";
             // 
-            // txtOgrenciAd
+            // txtSinav2
             // 
-            this.txtOgrenciAd.Location = new System.Drawing.Point(468, 74);
-            this.txtOgrenciAd.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOgrenciAd.Name = "txtOgrenciAd";
-            this.txtOgrenciAd.Size = new System.Drawing.Size(162, 21);
-            this.txtOgrenciAd.TabIndex = 4;
+            this.txtSinav2.Location = new System.Drawing.Point(468, 74);
+            this.txtSinav2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSinav2.Name = "txtSinav2";
+            this.txtSinav2.Size = new System.Drawing.Size(162, 21);
+            this.txtSinav2.TabIndex = 4;
             // 
             // label1
             // 
@@ -120,6 +121,7 @@
             this.btnHesapla.TabIndex = 7;
             this.btnHesapla.Text = "Hesapla";
             this.btnHesapla.UseVisualStyleBackColor = true;
+            this.btnHesapla.Click += new System.EventHandler(this.btnHesapla_Click);
             // 
             // btnListele
             // 
@@ -132,6 +134,7 @@
             this.btnListele.TabIndex = 8;
             this.btnListele.Text = "Güncelle";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // label2
             // 
@@ -179,21 +182,21 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Sınav 3:";
             // 
-            // txtOgrenciSoyad
+            // txtSinav1
             // 
-            this.txtOgrenciSoyad.Location = new System.Drawing.Point(468, 45);
-            this.txtOgrenciSoyad.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOgrenciSoyad.Name = "txtOgrenciSoyad";
-            this.txtOgrenciSoyad.Size = new System.Drawing.Size(162, 21);
-            this.txtOgrenciSoyad.TabIndex = 3;
+            this.txtSinav1.Location = new System.Drawing.Point(468, 45);
+            this.txtSinav1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSinav1.Name = "txtSinav1";
+            this.txtSinav1.Size = new System.Drawing.Size(162, 21);
+            this.txtSinav1.TabIndex = 3;
             // 
-            // textBox1
+            // txtSinav3
             // 
-            this.textBox1.Location = new System.Drawing.Point(468, 103);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 21);
-            this.textBox1.TabIndex = 5;
+            this.txtSinav3.Location = new System.Drawing.Point(468, 103);
+            this.txtSinav3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSinav3.Name = "txtSinav3";
+            this.txtSinav3.Size = new System.Drawing.Size(162, 21);
+            this.txtSinav3.TabIndex = 5;
             // 
             // label5
             // 
@@ -205,13 +208,13 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Sınav 2:";
             // 
-            // textBox2
+            // txtProje
             // 
-            this.textBox2.Location = new System.Drawing.Point(468, 132);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 21);
-            this.textBox2.TabIndex = 6;
+            this.txtProje.Location = new System.Drawing.Point(468, 132);
+            this.txtProje.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProje.Name = "txtProje";
+            this.txtProje.Size = new System.Drawing.Size(162, 21);
+            this.txtProje.TabIndex = 6;
             // 
             // label6
             // 
@@ -223,14 +226,14 @@
             this.label6.TabIndex = 34;
             this.label6.Text = "Proje:";
             // 
-            // textBox3
+            // txtDurum
             // 
-            this.textBox3.Location = new System.Drawing.Point(180, 132);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 21);
-            this.textBox3.TabIndex = 37;
-            this.textBox3.TabStop = false;
+            this.txtDurum.Location = new System.Drawing.Point(180, 132);
+            this.txtDurum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDurum.Name = "txtDurum";
+            this.txtDurum.Size = new System.Drawing.Size(162, 21);
+            this.txtDurum.TabIndex = 37;
+            this.txtDurum.TabStop = false;
             // 
             // label7
             // 
@@ -242,14 +245,14 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "Ortalama:";
             // 
-            // textBox4
+            // txtOrtalama
             // 
-            this.textBox4.Location = new System.Drawing.Point(180, 103);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 21);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TabStop = false;
+            this.txtOrtalama.Location = new System.Drawing.Point(180, 103);
+            this.txtOrtalama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOrtalama.Name = "txtOrtalama";
+            this.txtOrtalama.Size = new System.Drawing.Size(162, 21);
+            this.txtOrtalama.TabIndex = 5;
+            this.txtOrtalama.TabStop = false;
             // 
             // label8
             // 
@@ -310,15 +313,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnTemizle;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDurum;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtOrtalama;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtProje;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSinav3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtOgrenciAd;
+        private System.Windows.Forms.TextBox txtSinav2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHesapla;
         private System.Windows.Forms.Button btnListele;
@@ -327,7 +330,7 @@
         private System.Windows.Forms.ComboBox cmbDersListesi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtOgrenciSoyad;
+        private System.Windows.Forms.TextBox txtSinav1;
         private System.Windows.Forms.Button btnOgrenciBul;
     }
 }
